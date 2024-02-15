@@ -4,7 +4,7 @@ from openai import OpenAI
 import time
 
 # Set API key for OpenAI (replace with your actual API key)
-client = OpenAI(api_key="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")
+client = OpenAI(api_key="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")
 
 # Streamlit app configuration
 st.set_page_config(
