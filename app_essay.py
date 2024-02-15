@@ -49,7 +49,7 @@ def Basic_G(userPrompt):
 # Function to generate essay
 def generate_essay():
     # Generate user prompt based on inputs
-   prompt =st.secrets.a+topic+st.secrets.b+point_no+st.secrets.c+subp_no+st.secrets.d
+    prompt =st.secrets.a+topic+st.secrets.b+point_no+st.secrets.c+subp_no+st.secrets.d
     
     # Display loading message
     with st.spinner("Polishing your essay, almost there!"):
