@@ -34,9 +34,9 @@ st.markdown(
 )
 
 # Input boxes for user prompts
-topic = st.text_input("What is the topic?", "")
-point_no = st.number_input("How many points will be in the essay?", min_value=1, value=3)
-subp_no = st.number_input("How many subpoints will be in the essay?", min_value=1, value=2)
+topic = str(st.text_input("What is the topic?", ""))
+point_no = str(st.number_input("How many points will be in the essay?", min_value=1, value=3))
+subp_no = str(st.number_input("How many subpoints will be in the essay?", min_value=1, value=2))
 
 # Function to interact with OpenAI API
 def Basic_G(userPrompt):
@@ -66,9 +66,3 @@ def generate_essay():
 # Button to generate essay
 if st.button("Generate Essay"):
     generate_essay()
-
-# Footer
-st.markdown(
-    "<p style='text-align: center; font-size: small; color: #7041ce; margin-top: 20px;'>Developed by Md. Taseen Alam</p>",
-    unsafe_allow_html=True,
-)
