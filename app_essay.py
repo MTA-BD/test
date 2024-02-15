@@ -4,7 +4,7 @@ from openai import OpenAI
 import time
 
 # Set API key for OpenAI (replace with your actual API key)
-client = OpenAI(api_key="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")
+client = OpenAI(api_key=st.secrets.key_nai)
 
 # Streamlit app configuration
 st.set_page_config(
@@ -49,8 +49,7 @@ def Basic_G(userPrompt):
 # Function to generate essay
 def generate_essay():
     # Generate user prompt based on inputs
-    prompt = f"Suppose you are an expert in English language and Essay writing with an experience of 30 years. Now you have to help me in writing an essay about {topic} Begin by writing an awesome title for the essay. Then, you have to write an extraordinary and unique Topic sentence for the essay. Write the topic sentence in different sections. Then write an introduction paragraph. Then write {point_no} points on the topic sentence for the essay. Then add the description for each point. Remember to provide the descriptions in more than {subp_no} subpoints for each main point. Remember that the main points of the essay must be related and led by the Topic sentence. Keep the main points unique from one another. Remember to give information in the essay where needed. Add reference of the information. But don't use information too much. Add one real quote of a famous person completely related to the point of the essay. Don't give any kind of unreal quote which was not told by any speaker. Also, the reference of the quote that means by whom, where, and when the quote was told must be added beside the quote. Remember to give an idea of the main idea of the essay and the ideas of each main point in the introduction paragraph. You must write the introduction paragraph as like as the reader will be highly interested in the essay. But don't give the spoiler and the whole thing in the intro paragraph; so that the reader will be interested in reading the whole paragraph. At last, write a conclusion point. In the conclusion paragraph, summarize the whole essay in a few sentences. But keep in mind that the intro and conclusion para won't be completely the same. Bold and Highlight the words which are like the ornaments of the sentences or the artistic words, which will bear the witness of language proficiency, of the introduction and conclusion para. Also, write real quotes for the intro and the conclusion paragraph. If you use any artistic word or sentences, give the explanation of those in understandable and easy language; so that I can understand them properly."
-
+   prompt =st.secrets.a+topic+st.secrets.b+point_no+st.secrets.c+subp_no+st.secrets.d
     # Display loading message
     with st.spinner("Polishing your essay, almost there!"):
         time.sleep(2)  # Simulate the essay generation process
