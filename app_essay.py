@@ -50,6 +50,7 @@ def Basic_G(userPrompt):
 def generate_essay():
     # Generate user prompt based on inputs
    prompt =st.secrets.a+topic+st.secrets.b+point_no+st.secrets.c+subp_no+st.secrets.d
+    
     # Display loading message
     with st.spinner("Polishing your essay, almost there!"):
         time.sleep(2)  # Simulate the essay generation process
